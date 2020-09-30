@@ -9,6 +9,17 @@
 
 function sum(arr) {
   // Your code here
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return undefined;
+  }
+  let sum = 0;
+  for(let idx = 0; idx <= arr.length - 1; idx++){
+    if(isNaN(arr[idx])){
+      return undefined
+    }
+    sum += arr[idx]
+  }
+  return sum
 }
 
 // Part 2 - Test
@@ -19,3 +30,4 @@ function sum(arr) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = sum;
+

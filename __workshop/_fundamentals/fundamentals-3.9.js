@@ -16,6 +16,11 @@
 
 function longestWord(str) {
   // Place solution here
+  if(typeof str !== "string"){
+    return undefined
+  }
+  let arr = str.split(" ");
+  return arr.reduce(function(acc, curr) { return acc.length > curr.length ? acc : curr})
 }
 
 // Part 2 - Test
@@ -26,3 +31,7 @@ function longestWord(str) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = longestWord;
+
+console.log(
+  longestWord("a bb ccc dddd e ff ggg")
+)

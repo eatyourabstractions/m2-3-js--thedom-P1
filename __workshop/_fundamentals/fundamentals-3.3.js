@@ -12,6 +12,10 @@
 
 function sum(arr) {
   // Your code here
+  if (!Array.isArray(arr) || arr.length !== 2) {
+    return undefined;
+  }
+  return arr[0] + arr[1]
 }
 
 // Part 2 - Test
@@ -22,3 +26,4 @@ function sum(arr) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = sum;
+

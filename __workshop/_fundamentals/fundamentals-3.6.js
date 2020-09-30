@@ -19,6 +19,23 @@
 
 function calculator(arr) {
   // Your code here
+  const ops = ['add', 'sub', 'mul', 'div'];
+  const [op, num1, num2] = arr;
+  if(!ops.includes(op) || isNaN(num1) || isNaN(num2) || arr.length !== 3){
+    return undefined
+  }
+  let ans = 0;
+  switch (op) {
+    case "add": return num1 + num2;
+    case "sub": return num1 - num2;
+    case "mul": return num1 * num2;
+    case "div": return num1 / num2;
+    default:
+      return undefined
+  
+  }
+  return ans
+
 }
 
 // Part 2 - Test
@@ -29,3 +46,4 @@ function calculator(arr) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = calculator;
+

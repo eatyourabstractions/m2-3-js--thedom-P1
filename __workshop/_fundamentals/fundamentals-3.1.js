@@ -9,6 +9,10 @@
 
 function firstLetter(str) {
   // Your code here
+  if (typeof str !== "string" || str.length === 0) {
+    return undefined;
+  }
+  return str[0]
 }
 
 // Part 2 - Test
@@ -19,3 +23,5 @@ function firstLetter(str) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = firstLetter;
+
+

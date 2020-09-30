@@ -7,6 +7,11 @@
 
 function reverseIt(str) {
   // Your code here
+    if(typeof str !== "string"){
+      return undefined
+    }
+
+  return str.split("").reverse().join("");
 }
 
 // Part 2 - Test

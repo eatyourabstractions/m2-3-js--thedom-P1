@@ -13,6 +13,15 @@
 
 function repeat(arr) {
   // Your code here
+  const [repeatme, times] = arr;
+  let ans = ""
+  if(typeof repeatme !== "string" || isNaN(times) || !Array.isArray(arr) || repeatme.length < 1){
+    return undefined
+  } else if(times <= 0){ return ""}
+  for(let t = 1; t <= times; t++){
+      ans += repeatme
+  }
+  return ans
 }
 
 // Part 2 - Test
@@ -23,3 +32,7 @@ function repeat(arr) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = repeat;
+
+console.log(
+  repeat(["mike",0])
+)

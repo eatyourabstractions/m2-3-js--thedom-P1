@@ -9,6 +9,10 @@
 
 function makeIntoTitle(sentence) {
   // Your code here
+  if (typeof sentence !== "string" || sentence.length === 0) {
+    return undefined;
+  }
+  return sentence.split(" ").map(x => `${x[0].toUpperCase()}${x.substring(1)}`).join(" ")
 }
 
 // Part 2 - Test
@@ -19,3 +23,7 @@ function makeIntoTitle(sentence) {
 
 // We need to export the function in order for our unit test to have access to it.
 module.exports = makeIntoTitle;
+
+console.log(
+  makeIntoTitle("mike matos")
+)
